@@ -7,31 +7,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class MyService {
 
-    /*private MyComponent myComponent;
+    private MyComponent component;
 
-    // constructor based injection
     @Autowired
-    public MyService(MyComponent myComponent){
-        System.out.println("MyService constructor has been called");
-        this.myComponent = myComponent;
+    public MyService(MyComponent component){
+        System.out.println("Chiamato il costruttore della classe MyService");
+        this.component = component;
     }
 
     public String getName(){
-        System.out.println("MyService.getName() has been called");
-        return myComponent.getMyComponentName();
-    }*/
-
-    private MyComponent myComponent;
-
-    @Autowired
-    public MyService(MyComponent myComponent){
-        System.out.println("Chiamato il costruttore di MyService");
-        this.myComponent = myComponent;
+        System.out.println("Chiamato il metodo getName() della classe MyService");
+        return component.getMyComponentName();
     }
-
-    public String getName(){
-        System.out.println("Chiamato il metodo MyService.getName");
-        return myComponent.getMyComponentName();
-    }
-
 }

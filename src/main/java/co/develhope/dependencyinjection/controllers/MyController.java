@@ -7,38 +7,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MyController {
 
-    /*private MyService service;
+    private MyService service;
 
     public MyController(MyService service) {
-        System.out.println("MyController constructor has been called");
+        System.out.println("Chiamato il costruttore della classe MyController");
         this.service = service;
     }
 
     @GetMapping
     public String helloMsg(){
-        return "Hello, thanks for visiting us!";
-    }
-
-    @GetMapping("/getName")
-    public String getName(){
-        return service.getName();
-    }*/
-
-    private MyService service;
-
-    public MyController(MyService service){
-        System.out.println("Chiamato il costruttore di MyController");
-        this.service = service;
+        return "Bienvenido...alla spagnola";
     }
 
     @GetMapping("/getName")
     public String getName(){
         return service.getName();
     }
-
-    @GetMapping
-    public String message(){
-        return "Bienvenido";
-    }
-
 }
